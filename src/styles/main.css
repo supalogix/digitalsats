@@ -1,0 +1,338 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #e0e1dd;
+    background-color: #0d1b2a;
+    padding: 20px;
+  }
+  
+  /* Center the entire app container */
+  .app {
+    max-width: 1200px;  /* Adjust maximum width as needed */
+    margin: 0 auto;
+  }
+  
+  /* Center main content container (layout) */
+  .main-content {
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .header__logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .header__nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .header__nav-item {
+    margin-left: 15px;
+  }
+  
+  .header__nav-link {
+    text-decoration: none;
+    color: #e0e1dd;
+    transition: color 0.3s;
+  }
+  
+  .header__nav-link:hover {
+    color: #a1c4fd;
+  }
+  
+  /* Hamburger Menu Button */
+  .header__hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+  }
+  
+  /* Hamburger Lines */
+  .header__hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #e0e1dd;
+    margin: 5px 0;
+    display: block;
+  }
+  
+  /* Mobile Navigation: Hide by default */
+  .header__nav {
+    display: none;
+  }
+  
+  /* When the hamburger menu is open */
+  .header__nav--open {
+    display: block;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 767px) {
+    .header {
+      position: relative;
+    }
+    
+    .header__nav {
+      position: absolute;
+      top: 60px; /* Adjust based on header height */
+      left: 0;
+      right: 0;
+      background-color: #0d1b2a;
+      padding: 10px 0;
+      z-index: 100;
+    }
+    
+    .header__nav-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .header__nav-item {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Desktop Styles: Hide hamburger, show nav */
+  @media (min-width: 768px) {
+    .header__hamburger {
+      display: none;
+    }
+    
+    .header__nav {
+      display: block;
+    }
+    
+    .header__nav-list {
+      display: flex;
+    }
+  }
+  
+  /* Hero Section */
+  .hero__container {
+    padding: 20px 0;
+    /* Text is left aligned by default */
+
+    border-top: 1px solid white;
+  }
+  
+  .hero__title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .hero__video {
+    margin: 0 auto;
+    max-width: 560px;
+  }
+  
+  /* About Section */
+  .about__container {
+    padding: 20px 0;
+    border-top: 1px solid white;
+  }
+  
+  .about__title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .about__text {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .about__list {
+    list-style-type: disc;
+    padding-left: 20px;
+    /* Display inline-block to limit list width, while text remains left aligned */
+    display: inline-block;
+    text-align: left;
+  }
+  
+  /* Projects Section */
+  .projects__container {
+    padding: 20px 0;
+    border-top: 1px solid white;
+  }
+  
+  .projects__title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .projects__item {
+    margin-bottom: 20px;
+  }
+  
+  .projects__item-title {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .projects__item-text {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .projects__cta-link {
+    text-decoration: none;
+    color: #a1c4fd;
+    font-weight: bold;
+  }
+  
+  /* Founders Section */
+  .founders__container {
+    padding: 20px 0;
+    border-top: 1px solid white;
+  }
+  
+  .founders__title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .founders__profile {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .founders__name {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
+  .founders__bio {
+    margin-top: 5px;
+  }
+  
+  /* Blog Section */
+  .blog__container {
+    padding: 20px 0;
+    border-top: 1px solid white;
+  }
+  
+  .blog__title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .blog__item {
+    margin-bottom: 20px;
+  }
+  
+  .blog__item-title {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .blog__item-excerpt {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .blog__item-link {
+    text-decoration: none;
+    color: #a1c4fd;
+  }
+  
+  /* Contact Section */
+  .contact__container {
+    padding: 20px 0;
+    border-top: 1px solid white;
+  }
+  
+  .contact__title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .contact__text a {
+    color: #a1c4fd;
+    text-decoration: none;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px 0;
+    border-top: 1px solid #1b263b;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .footer__navigation,
+  .footer__social,
+  .footer__deep-links {
+    margin-bottom: 10px;
+  }
+  
+  .footer__link,
+  .footer__social-link,
+  .footer__deep-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #e0e1dd;
+    transition: color 0.3s;
+  }
+  
+  .footer__link:hover,
+  .footer__social-link:hover,
+  .footer__deep-link:hover {
+    color: #a1c4fd;
+  }
+   
+  /* Desktop Styles */
+  @media (min-width: 768px) {
+    body {
+      padding: 40px;
+    }
+    .header {
+      padding: 20px 0;
+    }
+    .hero__title {
+      font-size: 2.5em;
+    }
+    .hero__subtitle {
+      font-size: 1.3em;
+    }
+    .about__title,
+    .projects__title,
+    .founders__title,
+    .blog__title,
+    .contact__title {
+      font-size: 2em;
+    }
+  }
+  
