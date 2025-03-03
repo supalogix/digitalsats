@@ -5,7 +5,6 @@ const About = () => {
     <div className="about__container">
       <h2 className="about__title">About DigitalSats</h2>
       <p className="about__text">
-        Emerging from stealth mode, DigitalSats is the development arm of AIRST, bridging academic research with industrial innovation. 
         We pioneer gravitational anomaly detection technology and open source satellite simulation tools.
       </p>
       <ul className="about__list">
